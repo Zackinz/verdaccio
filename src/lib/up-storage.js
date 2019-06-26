@@ -17,7 +17,7 @@ import type { IProxy } from '../../types';
 
 const LoggerApi = require('./logger');
 const encode = function(thing) {
-  return encodeURIComponent(thing).replace(/^%40/, '@');
+  return encodeURIComponent(thing).replace(/^%2f/, '/').replace(/^%40/, '@');
 };
 const jsonContentType = HEADERS.JSON;
 const contentTypeAccept = `${jsonContentType};`;
